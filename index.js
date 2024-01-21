@@ -34,7 +34,8 @@ app.post("/submit",async (req,res)=>{
         let temperature = Math.floor(parseFloat(response2.data.main.temp)-273.15);
         res.render("index.ejs",{
             temperature:temperature,
-            weather:weather
+            weather:weather,
+            city_name:response2.data.city
         })
         
     }catch(error){
