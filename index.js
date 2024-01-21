@@ -1,9 +1,7 @@
-// HINTS:
-// 1. Import express and axios
+
 import axios from "axios"
 import express from "express"
 
-// 2. Create an express app and set the port number.
 const app = express();
 const port = 3000
 let data = {}
