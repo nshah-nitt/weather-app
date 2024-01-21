@@ -35,7 +35,7 @@ app.post("/submit",async (req,res)=>{
         res.render("index.ejs",{
             temperature:temperature,
             weather:weather,
-            city_name:response2.data.city
+            city_name:response2.data.name
         })
         
     }catch(error){
