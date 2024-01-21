@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Lisper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Titan+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+
+</head>
+<body>
+  <%if(locals.temperature && locals.weather){%>
+    <div class="card">
+      <p>
+        Temperature in your city is <%= temperature %> degree
+      </p>
+    </div>
+    <p class="user">
+      Feels like <%= weather %>
+    </p>
+  <%}else{ %>
+    <h1>Do You Know the Weather of your city ? Let's find out</h1>
+    <form action="/submit" method="post">
+      <input type="text" name="city" placeholder="Enter the City Name">
+      <button>Submit</button>
+    </form>
+  <%}%>
+</body>
+
+</html>
